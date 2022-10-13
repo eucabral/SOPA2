@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const userRoutes = require("./routes/userRoutes");
 
 const mongoose = require("mongoose");
 
@@ -12,6 +13,9 @@ app.use(cors({ Credential: true, origin: "http://localhost:3000" }));
 
 //public folder for images
 app.use(express.static("public"));
+
+//routes
+app.use("/users", userRoutes);
 
 //router not found
 app.use((req, res, next) => {
