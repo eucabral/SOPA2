@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const userRoutes = require("./routes/userRoutes");
+const petRoutes = require("./routes/petRoutes");
 
 //config JSON response
 app.use(express.json());
@@ -14,6 +15,7 @@ app.use(express.static("public"));
 
 //routes
 app.use("/users", userRoutes);
+app.use("/pet", petRoutes);
 
 //router not found
 app.use((req, res, next) => {
