@@ -13,17 +13,17 @@ router.post(
   petController.create
 );
 router.get("/", petController.getAll);
-// router.get("/mypets", verifyToken, petController.getAllUserPets);
-// router.get("/myadoptions", verifyToken, petController.getAllUserAdoptions);
-// router.get("/:id", petController.getPetById);
-// router.delete("/:id", verifyToken, petController.removePetById);
-// router.patch(
-//   "/:id",
-//   verifyToken,
-//   imageUpload.array("images"),
-//   petController.updatePet
-// );
-// router.patch("/schedule/:id", verifyToken, petController.schedule);
-// router.patch("/concluide/:id", verifyToken, petController.concludeAdoption);
+router.get("/mypets", verifyToken, petController.getAllUserPets);
+router.get("/myadoptions", verifyToken, petController.getAllUserAdoptions);
+router.get("/:id", petController.getPetById);
+router.delete("/:id", verifyToken, petController.removePetById);
+router.patch(
+  "/:id",
+  verifyToken,
+  imageUpload.array("images"),
+  petController.updatePet
+);
+router.patch("/schedule/:id", verifyToken, petController.schedule);
+router.patch("/conclude/:id", verifyToken, petController.concludeAdoption);
 
 module.exports = router;
