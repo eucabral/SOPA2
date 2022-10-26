@@ -1,0 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1.5em;
+  background-color: white;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.navbar_logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_logo img {
+  width: 40px;
+  margin-right: 0.8em;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: black;
+}
+
+.navbar li {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 0.5em 0.8em;
+  border-radius: 5px;
+}

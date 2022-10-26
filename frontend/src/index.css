@@ -6,12 +6,12 @@
 }
 
 h1 {
-  color: blue;
+  color: black;
   margin-bottom: 1em;
   font-size: 2.1em;
 }
 
 .bold {
   font-weight: bold;
-  color: blue;
+  color: black;
 }
