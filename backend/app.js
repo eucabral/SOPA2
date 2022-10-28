@@ -8,7 +8,7 @@ const petRoutes = require("./routes/petRoutes");
 app.use(express.json());
 
 //Solve Cors
-app.use(cors({ Credential: true, origin: "http://localhost:3000" }));
+app.use(cors({ Credential: true, origin: "http://localhost:3001" }));
 
 //public folder for images
 app.use(express.static("public"));

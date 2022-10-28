@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const getUserByToken = require("../helpers/get-user-by-token");
 
 exports.register = async (req, res) => {
-  const { name, email, phone, password, confirmpassword, images } = req.body;
+  const { name, email, phone, password, confirmpassword } = req.body;
 
   if (!name || !email || !phone || !password || !confirmpassword) {
     res.status(422).send({ message: "Preencha todos os campos!" });
@@ -135,10 +135,10 @@ exports.editUser = async (req, res) => {
 
   user.email = email;
 
-  if (!image) {
-    const imageName = req.file.filename;
-    user.image = imageName;
-  }
+  // if (!image) {
+  //   const imageName = req.file.filename;
+  //   user.image = imageName;
+  // }
 
   if (!phone) {
     res.status(422).json({ message: "O telefone é obrigatório!" });
